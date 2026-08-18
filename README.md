@@ -62,7 +62,7 @@ mi-proyecto/
    skill:
 
    ```bash
-   git clone https://github.com/marolc1427/skill-guia-estilo-informe-tecnico .claude/skills/guia-estilo-informe-tecnico
+   git clone https://github.com/marolc1427/skill-guia-estilo-informe-tecnico .claude/skills/skill-guia-estilo-informe-tecnico
    ```
 
    Si no usas git, también vale copiar la carpeta a mano; lo único imprescindible es
