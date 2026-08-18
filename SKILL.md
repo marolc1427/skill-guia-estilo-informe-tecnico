@@ -35,6 +35,36 @@ código, un README, un email), esta skill no aplica.
 
 ---
 
+## 0. Estructura global del informe
+
+Todo informe debe presentar, antes de nada:
+
+- **Portada** con título, autores, fecha, y encuadre del trabajo (asignatura, grado/máster,
+  titulación).
+- **Índice de contenidos** con todas las secciones y subsecciones.
+
+El cuerpo del documento debe seguir siempre este esqueleto mínimo, en este orden:
+
+1. Resumen y palabras clave
+2. Introducción
+3. Metodología
+4. Resultados
+5. Conclusiones y futuros trabajos
+6. Bibliografía
+
+Es flexible: se pueden añadir secciones, subsecciones o anexos adicionales si el trabajo lo
+requiere (revisión de literatura, marco teórico, configuración de equipos, etc.), pero
+ninguno de estos seis bloques puede faltar.
+
+## Resumen y palabras clave
+
+- Extensión: 250-300 palabras.
+- Debe explicitar tres cosas: qué problema se resuelve, cómo se ha resuelto y qué
+  conclusiones principales se han extraído.
+- Nunca debe incluir referencias bibliográficas.
+- Se redacta al final del proceso de escritura del documento, no al principio.
+- Palabras clave: 6 recomendadas.
+
 ## 1. Introducción
 
 La introducción debe incluir explícitamente:
@@ -43,8 +73,11 @@ La introducción debe incluir explícitamente:
 - **Planteamiento de la solución**: qué se ha hecho para abordarlo.
 - **Material y medios empleados**: con qué se ha resuelto (herramientas, datos, equipo,
   entorno).
+- **Mapa del documento**: al final de la introducción, describir la estructura del resto del
+  documento haciendo referencia cruzada a cada sección posterior, para que el lector sepa
+  dónde encontrar cada contenido.
 
-Si falta alguno de estos tres bloques, la introducción está incompleta aunque el texto
+Si falta alguno de estos cuatro bloques, la introducción está incompleta aunque el texto
 "suene bien".
 
 ## 2. Capitalización de títulos
@@ -120,6 +153,38 @@ Al revisar un informe, comprueba que la lista de la metodología case exactament
 las secciones reales del documento (mismo orden, mismos nombres, sin bibliografía ni
 conclusiones).
 
+## Resultados
+
+- Las subsecciones de "Resultados" deben corresponder 1:1, y en el mismo orden, con los
+  puntos numerados de la lista de "Metodología" (ver regla 7).
+- Todo resultado numérico, gráfico o tabla debe comentarse y analizarse explícitamente en el
+  texto; no debe quedar una figura o tabla sin comentar.
+
+## Conclusiones y futuros trabajos
+
+- Deben recopilar los comentarios y conclusiones parciales ya escritos en "Resultados", más
+  una conclusión final de cierre.
+- Deben enunciar mejoras y líneas de trabajo futuro, indicando si ya se está trabajando en
+  alguna de ellas.
+
+## Bibliografía: fuentes admisibles
+
+- Prohibido citar la Wikipedia, o usar figuras extraídas de ella.
+- Prohibido citar webs sin prestigio reconocido; solo se admiten fuentes de prestigio (IEEE,
+  ISA, Elsevier, editoriales/journals académicos, datasheets oficiales, etc.).
+
+## Consideraciones generales de redacción
+
+- Cada párrafo debe tener entidad suficiente: al menos ~6 líneas siempre que sea posible; no
+  dejar párrafos de una sola frase suelta.
+- Redacción preferiblemente impersonal; se permite ocasionalmente la 1ª persona del plural
+  ("hemos comprobado que...", "en este trabajo se ha analizado...").
+- Los títulos de sección y subsección nunca terminan en punto.
+- Nunca debe existir una única subsección suelta dentro de una sección: si se crea una
+  subsección, debe haber al menos dos, o ninguna.
+- Toda sección/subsección debe contener al menos un párrafo de texto antes de su primera
+  subsección; no se puede saltar directamente al primer subapartado.
+
 ## 8. Orden de las referencias cruzadas respecto a las figuras
 
 - La referencia cruzada a una figura (p. ej. "como se observa en la figura 3...") debe
@@ -128,6 +193,11 @@ conclusiones).
   aparecido.
 - Al revisar, verifica el orden real de aparición en el PDF compilado, no solo el orden
   en el código fuente (los flotantes de LaTeX pueden desplazarse).
+- Nunca usar fórmulas como "en la siguiente figura/tabla...": la referencia a una figura o
+  tabla debe hacerse siempre mediante referencia cruzada (p. ej. "como se puede ver en la
+  figura 3"), no mediante una alusión posicional.
+- Rótulo obligatorio: en figuras, "Figura" con el título situado debajo de la imagen; en
+  tablas, "Tabla" con el título situado encima de la tabla.
 
 ## 9. Resolución y formato de las figuras
 
@@ -169,6 +239,7 @@ conclusiones).
   - Indicar la fuente en el propio epígrafe (p. ej. "Fuente: [12]" o "Adaptado de
     [12]").
   - Incluir la referencia bibliográfica correspondiente en la bibliografía.
+  - Si la fuente es una web, indicar también la fecha de consulta.
 - Las figuras de elaboración propia no necesitan esta atribución.
 
 ## 14. Consistencia y agrupación de figuras repetitivas
@@ -186,6 +257,8 @@ tiempo, repetida para varias configuraciones o ensayos):
   sobre distintos ensayos/configuraciones.
 - Cada página de figuras agrupadas debe tener su propia referencia cruzada desde el
   texto (regla 8) donde se comenten en conjunto los resultados mostrados.
+- Además, usar una paleta de colores uniforme y suave (sin estridencias) en todas las
+  figuras del documento, no solo el mismo tamaño.
 
 ## 15. Numeración de ecuaciones
 
@@ -193,6 +266,17 @@ tiempo, repetida para varias configuraciones o ensayos):
   punto del texto.
 - Las ecuaciones que no se citan en ningún otro lugar del documento van sin número
   (p. ej. `\begin{equation*}` o `\[ ... \]` en LaTeX, no `\begin{equation}`).
+- Las ecuaciones **nunca** deben ser imágenes o capturas (de webs, PDFs o libros escaneados):
+  siempre se escriben con la sintaxis matemática de LaTeX.
+- La referencia cruzada a una ecuación numerada va **después** de que esta aparezca en el
+  texto (al contrario que en figuras/tablas, donde la referencia va antes; ver regla 8).
+- Las deducciones matemáticas largas no se transcriben paso a paso completas: solo se
+  explicitan los pasos clave, indicando en el texto cómo se ha llegado al resultado.
+- El símbolo de producto entre variables o cantidades nunca es el asterisco `*`; usar
+  yuxtaposición, `\,`, `\cdot` o `\times`.
+- Unidades de medida: siempre con espacio entre la cantidad y la unidad, y la unidad en tipo
+  redondo (nunca en cursiva).
+- Separador decimal: coma o punto son válidos; se prefiere la coma.
 
 ---
 
@@ -201,18 +285,37 @@ tiempo, repetida para varias configuraciones o ensayos):
 Al revisar un informe ya escrito, recorre esta lista y reporta cada incumplimiento con
 su ubicación:
 
-- [ ] Introducción: problema + solución + material/medios
-- [ ] Títulos en minúsculas salvo inicial y nombres propios
+- [ ] Portada e índice de contenidos presentes
+- [ ] Estructura mínima completa: resumen+palabras clave, introducción, metodología,
+      resultados, conclusiones y futuros trabajos, bibliografía
+- [ ] Resumen de 250-300 palabras, con problema+solución+conclusiones, sin bibliografía, y
+      6 palabras clave
+- [ ] Introducción: problema + solución + material/medios + mapa del documento con
+      referencias cruzadas
+- [ ] Subsecciones de "Resultados" correspondientes 1:1 con los puntos de la metodología
+- [ ] Todo resultado/gráfico/tabla comentado explícitamente en el texto
+- [ ] Conclusiones recogen lo dicho en resultados y enuncian trabajos futuros
+- [ ] Bibliografía sin Wikipedia ni webs de dudoso prestigio
+- [ ] Párrafos con entidad suficiente (~6 líneas), redacción impersonal
+- [ ] Ninguna subsección suelta (única) dentro de una sección
+- [ ] Toda sección tiene un párrafo antes de su primera subsección
+- [ ] Títulos en minúsculas salvo inicial y nombres propios; sin punto final
 - [ ] Ninguna figura prescindible; ninguna figura imprescindible eliminada
 - [ ] Epígrafes sin punto final; sin "vs."
 - [ ] Sin índice de figuras/tablas si no hay contenido para él
 - [ ] Sin negrita de énfasis en párrafos corridos
 - [ ] Metodología con párrafo intro + bullets numerados por sección (sin biblio/conclusiones)
-- [ ] Toda referencia cruzada aparece antes que su figura
+- [ ] Toda referencia cruzada de figura/tabla aparece antes que su figura; sin "en la
+      siguiente figura..."
+- [ ] Rótulo "Figura" (título abajo) / "Tabla" (título arriba) correcto
 - [ ] Figuras en EPS/PDF vectorial
 - [ ] Sin páginas con hueco en blanco por floats mal ubicados
 - [ ] Gráficas de resultados centradas en la región de interés
 - [ ] Tablas en estilo booktabs
-- [ ] Figuras ajenas con fuente citada y referencia en bibliografía
-- [ ] Figuras repetitivas con tamaño consistente y agrupadas en páginas de 4
-- [ ] Solo ecuaciones referenciadas están numeradas
+- [ ] Figuras ajenas con fuente citada, fecha de consulta si es web, y referencia en
+      bibliografía
+- [ ] Figuras repetitivas con tamaño y paleta de colores consistentes, agrupadas en páginas
+      de 4
+- [ ] Solo ecuaciones referenciadas están numeradas; ninguna ecuación es una imagen/captura
+- [ ] Referencia cruzada a ecuación aparece después de la ecuación
+- [ ] Sin asterisco como símbolo de producto; unidades con espacio y en redonda
